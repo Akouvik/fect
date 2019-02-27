@@ -26,19 +26,55 @@ function get_pomeranian() {
 }
 
 function img_navigation(data) {
+  let i = 0;
   let buttons = document.getElementsByClassName("btn");
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", () => {
-      let current = document.getElementsByClassName("active");
+  let arrow = document.getElementsByClassName("arrow");
+  let current = document.getElementsByClassName("active");
+
+  //navigate with arrows
+  for (let j = 0; j < arrow.length; j++) {
+    arrow[j].addEventListener("click", () => {
+      // console.log("i", i);
+
+      if (arrow[j].classList[1] == "right") {
+        //check if we are on the 5th page if not increase i
+        if (i < buttons.length - 1) {
+          i += 1;
+          current[0].className = current[0].className.replace("active", "");
+          buttons[i].className += " active";
+          render_pomeranians(data, i);
+        }
+        return;
+      } else {
+        if (i > 0) {
+          i -= 1;
+          current[0].className = current[0].className.replace("active", "");
+          buttons[i].className += " active";
+          render_pomeranians(data, i);
+        }
+        return;
+      }
+    });
+  }
+  // navigate by clicking on numbers
+  for (let k = 0; k < buttons.length; k++) {
+    console.log("k", k);
+
+    buttons[k].addEventListener("click", () => {
+      //to synch the arrow click event and the button click event
+      i = k;
       current[0].className = current[0].className.replace("active", "");
-      buttons[i].className += " active";
-      render_pomeranians(data, i);
+      buttons[k].className += " active";
+      render_pomeranians(data, k);
     });
   }
 }
+
 function render_pomeranians(data, currentPageNumber) {
   let response = data.message;
   let imageContainer = document.getElementById("imageContainer");
+
+  //clear the img display div
   imageContainer.innerHTML = "";
 
   let startIndex = imgPerPage * currentPageNumber; //0,10,20,30,40
