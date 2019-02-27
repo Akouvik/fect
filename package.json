@@ -5,8 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm run open",
+    "open": "concurrently \"nodemon app.js\" \"sleepms 800 && open http://localhost:8000\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10",
+    "sleep-ms": "^2.0.1"
+  }
 }
