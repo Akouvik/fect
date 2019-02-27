@@ -1,0 +1,32 @@
+$tablet-width: 768px;
+$desktop-width: 1023px;
+$change-format2: 940px;
+$change-format3: 690px;
+$chnage-format4: 680px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin bp2 {
+  @media (max-width: #{$change-format2}) {
+    @content;
+  }
+}
+@mixin bp3 {
+  @media (max-width: #{$change-format3}) {
+    @content;
+  }
+}
+@mixin bp4 {
+  @media (max-width: #{$change-format3}) {
+    @content;
+  }
+}

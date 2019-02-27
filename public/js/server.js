@@ -33,7 +33,8 @@ function img_navigation(data) {
 
   //navigate with arrows
   for (let j = 0; j < arrow.length; j++) {
-    arrow[j].addEventListener("click", () => {
+    arrow[j].addEventListener("click", e => {
+      e.preventDefault();
       // console.log("i", i);
 
       if (arrow[j].classList[1] == "right") {
@@ -60,7 +61,8 @@ function img_navigation(data) {
   for (let k = 0; k < buttons.length; k++) {
     console.log("k", k);
 
-    buttons[k].addEventListener("click", () => {
+    buttons[k].addEventListener("click", e => {
+      e.preventDefault();
       //to synch the arrow click event and the button click event
       i = k;
       current[0].className = current[0].className.replace("active", "");
@@ -90,11 +92,13 @@ function render_pomeranians(data, currentPageNumber) {
   }
 }
 function openModal(e) {
+  e.preventDefault();
   document.getElementById("modImg").src = e.srcElement.currentSrc;
   let modal = document.getElementById("modal");
   modal.style.display = "block";
   let close = document.getElementById("closeModal");
-  modal.addEventListener("click", () => {
+  modal.addEventListener("click", e => {
+    e.preventDefault();
     modal.style.display = "none";
     document.getElementById("modImg").src = "";
   });

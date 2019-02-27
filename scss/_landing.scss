@@ -1,8 +1,22 @@
+@import "mixins";
 $numbers_bg: lightgrey;
 body {
   background: #eff0f1;
   margin: 0 !important;
   text-align: center;
+
+  // @include bp2 {
+  //   background: pink;
+  // }
+}
+#content {
+  h1 {
+    color: darkturquoise;
+  }
+  p {
+    padding-bottom: 1em;
+    margin-top: -20px;
+  }
 }
 
 #pageNums {
