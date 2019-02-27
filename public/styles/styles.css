@@ -4,7 +4,8 @@ body {
   text-align: center; }
 
 #pageNums {
-  display: inline-flex; }
+  display: inline-flex;
+  padding: 1em; }
   #pageNums a {
     text-decoration: none;
     background-color: #fff;
@@ -18,7 +19,10 @@ body {
     #pageNums a:last-child {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px; }
-  #pageNums .btn:focus {
+  #pageNums .btn_num:focus {
+    border: 1px solid #ddd;
+    background-color: lightgrey; }
+  #pageNums .active {
     border: 1px solid #ddd;
     background-color: lightgrey; }
 

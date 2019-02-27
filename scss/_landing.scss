@@ -32,4 +32,8 @@ body {
       background-color: $numbers_bg;
     }
   }
+  .active {
+    border: 1px solid #ddd;
+    background-color: $numbers_bg;
+  }
 }
