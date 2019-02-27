@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss public/styles/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "start": "npm run open",
     "open": "concurrently \"nodemon app.js\" \"sleepms 800 && open http://localhost:8000\""
   },
@@ -12,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "sleep-ms": "^2.0.1"
   }

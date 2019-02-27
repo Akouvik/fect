@@ -58,6 +58,10 @@ function openModal(e) {
   let modal = document.getElementById("modal");
   modal.style.display = "block";
   let close = document.getElementById("closeModal");
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.getElementById("modImg").src = "";
+  });
   close.addEventListener("click", () => {
     modal.style.display = "none";
     document.getElementById("modImg").src = "";
