@@ -1,0 +1,50 @@
+@import "landing";
+@import "mixins";
+img:hover {
+  cursor: pointer;
+}
+
+div {
+  #modal {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    #modImg {
+      margin: 10% auto;
+    }
+    .close {
+      position: fixed;
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+#imageContainer {
+  max-width: 960px;
+  text-align: center;
+  margin: 0 auto;
+  .response_img {
+    width: 10em;
+    height: 10em;
+    margin: 4px;
+    border: 4px solid white;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+}
