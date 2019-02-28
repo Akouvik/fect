@@ -36,9 +36,11 @@ div {
 #imageContainer {
   max-width: 960px;
   text-align: center;
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: -1em auto;
   .response_img {
-    width: 11em;
+    width: 9em;
+    // width: 11em;
     height: 10em;
     border-radius: 5px;
     padding: 1em;
@@ -84,10 +86,25 @@ div {
   //   background: pink;
   // }
 }
-// width: 11em;
-// height: 10em;
-// border-radius: 5px;
-// padding: 1em;
-// margin: 4px;
-// transition: transform 0.7s;
-// border: 4px solid white;
+
+#content {
+  #breedDiv {
+    margin-top: -1em;
+    margin-bottom: 3em;
+    position: relative;
+    left: 3em;
+  }
+  input {
+    width: 16%;
+    height: 2em;
+    margin-left: 1em;
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align: center;
+    outline: none;
+  }
+  input:focus::-webkit-input-placeholder {
+    outline: none;
+    color: transparent;
+  }
+}

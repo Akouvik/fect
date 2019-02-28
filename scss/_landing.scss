@@ -21,12 +21,12 @@ body {
 
 #pageNums {
   display: inline-flex;
-  padding: 1em;
+  padding: 2em 5em;
   a {
     text-decoration: none;
     background-color: #fff;
     color: black;
-    padding: 8px 16px;
+    padding: 1em 2em;
 
     &:hover {
       opacity: 0.5;
@@ -39,6 +39,12 @@ body {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
+    @include bp3 {
+      padding: 0.5em 1.7em;
+    }
+    @include bp4 {
+      padding: 8px 16px;
+    }
   }
   .btn_num {
     &:focus {
@@ -49,5 +55,8 @@ body {
   .active {
     border: 1px solid #ddd;
     background-color: $numbers_bg;
+  }
+  @include bp4 {
+    padding: 1em;
   }
 }

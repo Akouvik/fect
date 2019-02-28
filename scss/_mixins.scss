@@ -2,7 +2,7 @@ $tablet-width: 768px;
 $desktop-width: 1023px;
 $change-format2: 940px;
 $change-format3: 690px;
-$chnage-format4: 680px;
+$chnage-format4: 445px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
