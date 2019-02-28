@@ -112,6 +112,7 @@ window.onload = (function() {
         buttons[k].className += " active";
         render_pomeranians(response, k);
       });
+      i = k;
     }
   }
 
